@@ -1,0 +1,21 @@
+fx_version 'cerulean'
+game 'gta5'
+
+author 'CoreZ Team'
+version '0.1.0'
+
+shared_scripts {
+    'configs/*.lua',
+    'shared/locale.lua',
+    'languages/*.lua'
+}
+
+client_scripts {
+    'client/spawn.lua',
+    'client/main.lua'
+}
+
+server_scripts {
+    '@oxmysql/lib/MySQL.lua',
+    'server/main.lua'
+}
