@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'CoreZ Team'
-version '0.1.0'
+version '0.3.0'
 
 shared_scripts {
     'configs/*.lua',
