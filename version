@@ -1,5 +1,2 @@
-0.3.0
-- Change: converted to event-only Core API usage (listen for `cz-core:ready`)
-- Change: no longer relies on exports or globals; requests API via `cz-core:request_api` when needed
-- Feature: uses Core `Versioner.checkFile` to validate resource version against repo
-- Minor: cleaned startup logic and removed legacy fallbacks
+0.4.0
+- Fix: NUI freezes, restore KeyboardInput, ensure reliable spawn/unfreeze
