@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#app {
+    background: #111;
+    color: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    width: 480px;
+}
+#list {
+    margin-top: 10px;
+}
+.char {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #222;
+}
+.char b {
+    color: #9cf;
+}
+.actions {
+    margin-top: 12px;
+    text-align: right;
+}
+.hidden {
+    display: none;
+}
