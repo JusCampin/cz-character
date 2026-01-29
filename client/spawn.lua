@@ -1,6 +1,17 @@
+CZCharacterSpawnPoints = CZCharacterSpawnPoints or {}
+
 AddEventHandler('onClientGameTypeStart', function()
-    local defaultSpawn = vector4(-540.58, -212.02, 37.65, 208.88)
-    local hospitalSpawn = vector4(354.09, -603.54, 28.78, 260.0)
+    local spawnPoints = CZCharacterSpawnPoints or nil
+    local function pickSpawn()
+        if type(spawnPoints) == 'table' and #spawnPoints > 0 then
+            local idx = math.random(#spawnPoints)
+            local s = spawnPoints[idx]
+            return vector4(s.x or 0, s.y or 0, s.z or 0, s.heading or 0)
+        end
+        return vector4(-540.58, -212.02, 37.65, 208.88)
+    end
+    local defaultSpawn = pickSpawn()
+    local hospitalSpawn = pickSpawn()
     local firstSpawn = true
 
     exports.spawnmanager:setAutoSpawnCallback(function()
